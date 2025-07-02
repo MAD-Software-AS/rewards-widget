@@ -7,15 +7,11 @@ export interface WidgetContextValues {
   loading: boolean
   rewardsSliderProps: {
     minItemSize: number
-    maxWidth: string
   }
 }
 
 const WidgetContext = createContext<WidgetContextValues>({
-  rewardsSliderProps: {
-    maxWidth: '1100px',
-    minItemSize: 300
-  },
+  rewardsSliderProps: { minItemSize: 300 },
   rewards: [],
   loading: true,
   env: 'dev'

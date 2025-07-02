@@ -3,7 +3,11 @@ import React from 'react'
 import Slider from '../../components/Slider/Slider'
 import useWidgetContext from '../../contexts/Widget/useWidgetContext'
 
-const RewardsSlider: React.FC = () => {
+interface RewardsSliderProps {
+  containerWidth: string
+}
+
+const RewardsSlider: React.FC<RewardsSliderProps> = ({ containerWidth }) => {
   const { rewardsSliderProps, rewards, loading } = useWidgetContext()
 
   if (loading) {
@@ -14,7 +18,7 @@ const RewardsSlider: React.FC = () => {
             display: 'flex',
             justifyContent: 'center',
             height: `${rewardsSliderProps.minItemSize}px`,
-            width: rewardsSliderProps.maxWidth
+            width: '100%'
           }}
         >
           <Loading />
@@ -32,7 +36,7 @@ const RewardsSlider: React.FC = () => {
   return (
     <Slider
       items={mappedRewards}
-      maxWidth={rewardsSliderProps.maxWidth}
+      maxWidth={containerWidth}
       minItemSize={rewardsSliderProps.minItemSize}
     />
   )

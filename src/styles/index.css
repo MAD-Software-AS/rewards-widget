@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  margin-inline: 56px;
 }
 .spinner-container {
   display: flex;
