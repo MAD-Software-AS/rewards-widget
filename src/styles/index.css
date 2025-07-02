@@ -53,6 +53,7 @@
   font-family: monospace;
   box-sizing: border-box;
   padding: 8px;
+  user-select: none;
 }
 
 .slider-item img {
@@ -60,6 +61,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: var(--border-radius-default);
+  user-select: none;
 }
 
 .item-title {
@@ -74,6 +76,7 @@
   font-size: var(--font-size-default);
   line-height: var(--line-height-default);
   font-family: var(--font-default);
+  user-select: none;
 }
 
 .slider-arrow {
