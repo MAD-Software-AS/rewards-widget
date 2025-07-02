@@ -6,12 +6,12 @@ export interface WidgetContextValues {
   rewards: Reward[]
   loading: boolean
   rewardsSliderProps: {
-    minItemSize: number
+    minItemSize: number[]
   }
 }
 
 const WidgetContext = createContext<WidgetContextValues>({
-  rewardsSliderProps: { minItemSize: 300 },
+  rewardsSliderProps: { minItemSize: [200, 200, 160, 140] },
   rewards: [],
   loading: true,
   env: 'dev'
